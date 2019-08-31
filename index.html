@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html>
   <head>
-    <title>Zero To Mastery</title>
+    <title>My first website!</title>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <h1>Zero to Mastery</h1>
+    <button class="btn btn-primary">Default</button>
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h2>Home</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </section>
 
     <form action="" method="GET">
       First Name: <input type="text" name="firstname" /><br />
@@ -18,9 +39,9 @@
       <input type="radio" name="gender" value="female" />Female<br />
       <input type="radio" name="gender" value="other" />Other<br />
       Pets:<br />
-      <input type="checkbox" value="cat" />Cat<br />
-      <input type="checkbox" value="dog" />Dog<br />
-      <input type="checkbox" value="bird" />Bird<br />
+      <input type="checkbox" name="cat" />Cat<br />
+      <input type="checkbox" name="dog" />Dog<br />
+      <input type="checkbox" name="bird" />Bird<br />
       Cars: <br />
       <select name="cars">
         <option name="volvo" value="volvo">Volvo</option>
