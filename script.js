@@ -1,4 +1,4 @@
 let h1 = document.querySelector("h1");
 
-h1.innerText = "JS KING!";
-h1.style.color = "red";
+// h1.innerText = "JS Swap!";
+h1.style.textAlign = "center";
