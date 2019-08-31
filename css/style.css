@@ -1,5 +1,114 @@
-h1 {
-  font-size: 50px;
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+nav {
+  width: 60%;
+  margin: 20px auto;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav ul li {
+  list-style: none;
   color: blue;
+  font-size: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+.mainContainer {
+  width: 100%;
+  height: calc(90vh - 50px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainContainer h2 {
+  font-size: 90px;
+  color: blueviolet;
+  margin-bottom: 30px;
+}
+
+.mainContainer p {
+  max-width: 800px;
+  padding: 0 20px;
+  line-height: 140%;
+}
+
+form {
+  margin: 4rem auto 0;
+  border: 2px solid #552a7c;
+  border-radius: 5px;
+  padding: 20px;
+  width: 35%;
+  color: #783daf;
+}
+
+form input {
+  margin-bottom: 5px;
+}
+
+form .mainInput input {
+  width: 100%;
+  padding: 5px;
+}
+
+form .inputTitle {
+  color: #371c50;
+  font-weight: 700;
+}
+
+form .buttonInputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+form .buttonInputs .genderInput {
+  width: 50%;
+}
+
+form .buttonInputs .petInput {
+  width: 50%;
+}
+
+form .regButton {
+  width: 100%;
+  padding: 10px;
+  background: #999;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

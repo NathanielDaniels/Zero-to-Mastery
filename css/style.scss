@@ -1,4 +1,88 @@
-h1 {
-  font-size: 50px;
-  color: blue;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+nav {
+  width: 60%;
+  margin: 20px auto;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    li {
+      list-style: none;
+      color: blue;
+      font-size: 20px;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.mainContainer {
+  width: 100%;
+  height: calc(90vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: 90px;
+    color: blueviolet;
+    margin-bottom: 30px;
+  }
+
+  p {
+    max-width: 800px;
+    padding: 0 20px;
+    line-height: 140%;
+  }
+}
+
+form {
+  margin: 4rem auto 0;
+  border: 2px solid rgb(85, 42, 124);
+  border-radius: 5px;
+  padding: 20px;
+  width: 35%;
+  color: rgb(120, 61, 175);
+  input {
+    margin-bottom: 5px;
+  }
+  .mainInput {
+    input {
+      width: 100%;
+      padding: 5px;
+    }
+  }
+  .inputTitle {
+    color: rgb(55, 28, 80);
+    font-weight: 700;
+  }
+  .buttonInputs {
+    display: flex;
+    margin: 15px 0;
+    cursor: pointer;
+    .genderInput {
+      width: 50%;
+    }
+    .petInput {
+      width: 50%;
+    }
+  }
+  .regButton {
+    width: 100%;
+    padding: 10px;
+    background: #999;
+    cursor: pointer;
+  }
 }

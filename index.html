@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>My first website!</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
-    <button class="btn btn-primary">Default</button>
+    <!-- <button class="btn btn-primary">Default</button> -->
+
     <header>
       <nav>
         <ul>
@@ -15,7 +16,8 @@
         </ul>
       </nav>
     </header>
-    <section>
+
+    <section class="mainContainer">
       <h2>Home</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -29,25 +31,36 @@
     </section>
 
     <form action="" method="GET">
-      First Name: <input type="text" name="firstname" /><br />
-      Last Name: <input type="text" name="lastname" /><br />
-      Email: <input type="email" name="email" /><br />
-      Password: <input type="password" name="password" min="5" /><br />
-      Birthday: <input type="date" name="birthday" /><br />
-      Gender:<br />
-      <input type="radio" name="gender" value="male" />Male<br />
-      <input type="radio" name="gender" value="female" />Female<br />
-      <input type="radio" name="gender" value="other" />Other<br />
-      Pets:<br />
-      <input type="checkbox" name="cat" />Cat<br />
-      <input type="checkbox" name="dog" />Dog<br />
-      <input type="checkbox" name="bird" />Bird<br />
-      Cars: <br />
-      <select name="cars">
-        <option name="volvo" value="volvo">Volvo</option>
-        <option name="Acura" value="acura">Acura</option> </select
-      ><br />
-      <input type="submit" value="Register!" <input type="reset" />
+      <div class="mainInput">
+        First Name: <input type="text" name="firstname" /><br />
+        Last Name: <input type="text" name="lastname" /><br />
+        Email: <input type="email" name="email" /><br />
+        Password: <input type="password" name="password" min="5" /><br />
+        Birthday: <input type="date" name="birthday" /><br />
+      </div>
+      <div class="buttonInputs">
+        <div class="genderInput">
+          <span class="inputTitle">Gender:</span><br />
+          <input type="radio" name="gender" value="male" />Male<br />
+          <input type="radio" name="gender" value="female" />Female<br />
+          <input type="radio" name="gender" value="other" />Other<br />
+        </div>
+        <div class="petInput">
+          <span class="inputTitle">Pets:</span><br />
+          <input type="checkbox" name="cat" />Cat<br />
+          <input type="checkbox" name="dog" />Dog<br />
+          <input type="checkbox" name="bird" />Bird<br />
+        </div>
+        <div class="carInput">
+          <span class="inputTitle">Cars:</span><br />
+          <select name="cars">
+            <option name="volvo" value="volvo">Volvo</option>
+            <option name="Acura" value="acura">Acura</option> </select
+          ><br />
+        </div>
+      </div>
+
+      <input class="regButton" type="submit" value="Register!" type="reset" />
     </form>
 
     <script src="/script.js"></script>
