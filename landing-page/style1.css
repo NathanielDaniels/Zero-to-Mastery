@@ -7,32 +7,39 @@
 body,
 html {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   cursor: default;
   background: #010005;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h2 {
   color: #fff;
   position: relative;
-  top: 45%;
+  bottom: 64%;
   display: flex;
   justify-content: center;
   font-size: 1.1rem;
   text-transform: uppercase;
 }
 
-/* #mc_embed_signup form {
-  display: none;
-} */
 .email-btn {
   position: relative;
-  top: 65%;
+  bottom: 44%;
 }
 .btn-warning {
   display: flex;
@@ -50,15 +57,4 @@ h2 {
   border: 2px solid rgba(0, 0, 0, 0.384);
   transform: scale(1.1);
   filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.76));
-}
-
-img {
-  display: block;
-  margin: auto;
-  width: 100%;
-  max-width: 1000px;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
