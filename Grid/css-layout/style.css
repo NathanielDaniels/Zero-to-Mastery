@@ -49,13 +49,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50vh;
 }
 
 .blue {
   display: grid;
-  grid-template-columns: repeat(4, minmax(100px, 1fr));
-  grid-template-rows: repeat(2, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
+  grid-template-rows: repeat(2, minmax(50px, 1fr));
   grid-gap: 10px;
+  padding: 50px;
 }
 
 .zone:hover {
@@ -69,15 +71,11 @@
     inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
 }
 
-.blue {
-  padding: 10px;
-}
-
 .blue img {
   width: 100%;
   height: 200px;
   background: rgba(0, 0, 0, 0.76);
-  padding: 50px;
+  padding: 20px;
 }
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
