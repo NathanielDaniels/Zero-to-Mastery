@@ -1,11 +1,21 @@
-switch (name) {
-  case name === "Nate":
-    console.log("Name is Nate");
-    break;
-  case name === "Susan":
-    console.log("name is Susan");
-    break;
-  default:
-    console.log("did you enter name?");
-    break;
+let age = prompt("How Old are You?");
+
+if (Number(age) < 18) {
+  alert("Sorry, you are too young to drive this car. Powering off");
+} else if (Number(age) === 18) {
+  alert("Congratulations on your first year of driving. Enjoy the ride!");
+} else {
+  alert("Powering On. Enjoy the ride!");
 }
+
+// switch (age) {
+//   case Number(age) < 18:
+//     alert("Sorry, you are too young to drive this car. Powering off");
+//     break;
+//   case Number(age) === 18:
+//     alert("Congratulations on your first year of driving. Enjoy the ride!");
+//     break;
+//   case Number(age) > 18:
+//     alert("Powering On. Enjoy the Ride!");
+//     break;
+// }
