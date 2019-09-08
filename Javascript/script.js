@@ -31,9 +31,32 @@
 //?======================================
 //! Arrays
 
-let list = ["tiger", "cat", "bear", "bird"];
+//* Exercise 6
 
-console.log(list);
+let array = ["Banana", "Apples", "Oranges", "Blueberries"];
+
+let banana = array.shift();
+console.log(banana);
+
+array.sort();
+console.log(array);
+
+array.push("kiwi");
+console.log(array);
+
+let apples = array.splice(0, 1);
+console.log(apples);
+
+console.log(array);
+
+array.reverse();
+
+console.log(array);
+
+var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
+
+let oranges = array2[1][1][0];
+console.log(oranges);
 
 //?======================================
 
