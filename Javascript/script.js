@@ -111,91 +111,125 @@
 //?======================================
 //! Exercise 7 (Facebook App)
 
-let database = [
-  {
-    username: "Nathan",
-    password: "password"
-  },
-  {
-    username: "Stanley",
-    password: "stanpass"
-  }
-];
+// let database = [
+//   {
+//     username: "Nathan",
+//     password: "password"
+//   },
+//   {
+//     username: "Stanley",
+//     password: "stanpass"
+//   }
+// ];
 
-let newsfeed = [
-  {
-    username: "Bobby",
-    timeline: "So tired from all that learning!"
-  },
-  {
-    username: "Sally",
-    timeline: "Javascript is sooooo cool!"
-  },
-  {
-    username: "Mitch",
-    timeline: "Javascript is preeetyy cool!"
-  }
-];
+// let newsfeed = [
+//   {
+//     username: "Bobby",
+//     timeline: "So tired from all that learning!"
+//   },
+//   {
+//     username: "Sally",
+//     timeline: "Javascript is sooooo cool!"
+//   },
+//   {
+//     username: "Mitch",
+//     timeline: "Javascript is preeetyy cool!"
+//   }
+// ];
 
-var userNamePrompt = prompt("Enter Username Below:");
-var userPasswordPrompt = prompt("Enter Password Below:");
+// var userNamePrompt = prompt("Enter Username Below:");
+// var userPasswordPrompt = prompt("Enter Password Below:");
 
-for (let o of database) {
-  console.log(o);
-}
+// for (let o of database) {
+//   console.log(o);
+// }
 
-for (let i = 0; i < database.length; i++) {
-  // debugger;
-  function signIn(user, pass) {
-    if (user === database[i].username && pass === database[i].password) {
-      alert(`Welcome, ${userNamePrompt}`);
-      console.log(newsfeed);
-    } else {
-      alert(
-        `Sorry ${userNamePrompt}, Your password seems to be Invalid. Please Try Again`
-      );
-    }
-  }
-  //   if (
-  //     userNamePrompt === database[i].username &&
-  //     userPasswordPrompt === database[i].password
-  //   ) {
-  //     alert(`Welcome, ${userNamePrompt}`);
-  //   } else {
-  //     alert(
-  //       `Sorry ${userNamePrompt}, Your password seems to be Invalid. Please Try Again`
-  //     );
-  //   }
-}
+// for (let i = 0; i < database.length; i++) {
+// debugger;
+// function signIn(user, pass) {
+//   if (user === database[i].username && pass === database[i].password) {
+//     alert(`Welcome, ${userNamePrompt}`);
+//     console.log(newsfeed);
+//   } else {
+//     alert(
+//       `Sorry ${userNamePrompt}, Your password seems to be Invalid. Please Try Again`
+//     );
+//   }
+// }
 
-signIn(userNamePrompt, userPasswordPrompt);
+//   if (
+//     userNamePrompt === database[i].username &&
+//     userPasswordPrompt === database[i].password
+//   ) {
+//     alert(`Welcome, ${userNamePrompt}`);
+//   } else {
+//     alert(
+//       `Sorry ${userNamePrompt}, Your password seems to be Invalid. Please Try Again`
+//     );
+//   }
+// }
+
+// signIn(userNamePrompt, userPasswordPrompt);
 
 //?======================================
 //! Javascript Terminology
 
 //*function Declaration
-function newFunction() {}
+// function newFunction() {}
 
 //*function Expression
-let newFunction = function() {};
+// let newFunction = function() {};
 
 //*expression
-// an expression is anything that produces a value
-1 + 3;
-let a = 2;
-return true;
+//? an expression is anything that produces a value
+// 1 + 3;
+// let a = 2;
+// return true;
 
 //*calling (involking) a function
-alert();
-newFunction(param1, param2);
+// alert();
+// newFunction(param1, param2);
 
 //*assign a variable
-let b = true;
+// let b = true;
 
 //*function vs method
-function thisIsAFunction() {}
-var obj = { thisIsAMethod: function() {} };
+// function thisIsAFunction() {}
+// var obj = { thisIsAMethod: function() {} };
 
 //* calling function vs method
-thisIsAFunction(0);
-obj.thisIsAMethod();
+// thisIsAFunction(0);
+// obj.thisIsAMethod();
+
+//?======================================
+//! LOOPS!
+
+let todos = [
+  "clean room",
+  "brush teeth",
+  "exercise",
+  "study javascript",
+  "eat healthy"
+];
+
+//* for loop
+for (let i = 0; i < todos.length; i++) {
+  todos[i] = `${todos[i]}!`;
+}
+console.log(todos);
+
+console.log("=============================");
+
+//* forEach
+todos.forEach(i => {
+  console.log(i);
+});
+
+console.log("=============================");
+
+//* while loop
+let i = 0;
+while (i < todos.length) {
+  console.log(todos[i]);
+  i++;
+}
