@@ -61,53 +61,113 @@
 //?======================================
 //! Objects
 
-let user = {
-  //? Property: Value,
-  name: "Nathan",
-  age: 33,
-  hobby: "coding",
-  isMarried: false,
-  shout: () => {
-    console.log("Loud Noises!");
-  }
-};
+// let user = {
+//   //? Property: Value,
+//   name: "Nathan",
+//   age: 33,
+//   hobby: "coding",
+//   isMarried: false,
+//   shout: () => {
+//     console.log("Loud Noises!");
+//   }
+// };
 
-console.log(user);
-console.log(user.name);
+// console.log(user);
+// console.log(user.name);
 
-user.lastName = "Daniels";
-console.log(user);
+// user.lastName = "Daniels";
+// console.log(user);
 
 //* Run the arrow function inside user object
 //? this is called a Method
-user.shout();
+// user.shout();
 
 //* Change user name
 // user.name = "stan";
 // console.log(user);
 
 //* if statement from Object Property Value
-if (user.name === "Nathan" || user.lastName === "Daneils") {
-  console.log(`Welcome in, ${user.name} ${user.lastName}!`);
-} else {
-  console.log(`You're Not Welcome Here`);
-}
+// if (user.name === "Nathan" || user.lastName === "Daneils") {
+//   console.log(`Welcome in, ${user.name} ${user.lastName}!`);
+// } else {
+//   console.log(`You're Not Welcome Here`);
+// }
 
 //* Object inside Array
 
-let list = [
+// let list = [
+//   {
+//     username: "Andy",
+//     password: "secret"
+//   },
+//   {
+//     username: "Stan",
+//     password: "123"
+//   }
+// ];
+
+//* pull username from 2nd object inside list array
+// console.log(list[1].username);
+//?======================================
+//! Exercise 7 (Facebook App)
+
+let database = [
   {
-    username: "Andy",
-    password: "secret"
+    username: "Nathan",
+    password: "password"
   },
   {
-    username: "Stan",
-    password: "123"
+    username: "Stanley",
+    password: "stanpass"
   }
 ];
 
-//* pull username from 2nd object inside list array
-console.log(list[1].username);
-//?======================================
+let newsfeed = [
+  {
+    username: "Bobby",
+    timeline: "So tired from all that learning!"
+  },
+  {
+    username: "Sally",
+    timeline: "Javascript is sooooo cool!"
+  },
+  {
+    username: "Mitch",
+    timeline: "Javascript is preeetyy cool!"
+  }
+];
+
+var userNamePrompt = prompt("Enter Username Below:");
+var userPasswordPrompt = prompt("Enter Password Below:");
+
+for (let o of database) {
+  console.log(o);
+}
+
+for (let i = 0; i < database.length; i++) {
+  // debugger;
+  function signIn(user, pass) {
+    if (user === database[i].username && pass === database[i].password) {
+      alert(`Welcome, ${userNamePrompt}`);
+      console.log(newsfeed);
+    } else {
+      alert(
+        `Sorry ${userNamePrompt}, Your password seems to be Invalid. Please Try Again`
+      );
+    }
+  }
+  //   if (
+  //     userNamePrompt === database[i].username &&
+  //     userPasswordPrompt === database[i].password
+  //   ) {
+  //     alert(`Welcome, ${userNamePrompt}`);
+  //   } else {
+  //     alert(
+  //       `Sorry ${userNamePrompt}, Your password seems to be Invalid. Please Try Again`
+  //     );
+  //   }
+}
+
+signIn(userNamePrompt, userPasswordPrompt);
 
 //?======================================
