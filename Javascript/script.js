@@ -171,3 +171,31 @@ for (let i = 0; i < database.length; i++) {
 signIn(userNamePrompt, userPasswordPrompt);
 
 //?======================================
+//! Javascript Terminology
+
+//*function Declaration
+function newFunction() {}
+
+//*function Expression
+let newFunction = function() {};
+
+//*expression
+// an expression is anything that produces a value
+1 + 3;
+let a = 2;
+return true;
+
+//*calling (involking) a function
+alert();
+newFunction(param1, param2);
+
+//*assign a variable
+let b = true;
+
+//*function vs method
+function thisIsAFunction() {}
+var obj = { thisIsAMethod: function() {} };
+
+//* calling function vs method
+thisIsAFunction(0);
+obj.thisIsAMethod();
