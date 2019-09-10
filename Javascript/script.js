@@ -233,3 +233,10 @@ while (i < todos.length) {
   console.log(todos[i]);
   i++;
 }
+
+//* do while loop
+let counterTwo = 10;
+do {
+  console.log(counterTwo);
+  counterTwo--;
+} while (counterTwo > 0);
