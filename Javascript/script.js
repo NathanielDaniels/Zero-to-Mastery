@@ -204,50 +204,50 @@
 //?======================================
 //! LOOPS!
 
-let todos = [
-  "clean room",
-  "brush teeth",
-  "exercise",
-  "study javascript",
-  "eat healthy"
-];
+// let todos = [
+//   "clean room",
+//   "brush teeth",
+//   "exercise",
+//   "study javascript",
+//   "eat healthy"
+// ];
 
-//* for loop
-for (let i = 0; i < todos.length; i++) {
-  todos[i] = `${todos[i]}!`;
-}
-console.log(todos);
+// //* for loop
+// for (let i = 0; i < todos.length; i++) {
+//   todos[i] = `${todos[i]}!`;
+// }
+// console.log(todos);
 
-console.log("=============================");
+// console.log("=============================");
 
-//* forEach
-todos.forEach(i => {
-  console.log(i);
-});
+// //* forEach
+// todos.forEach(i => {
+//   console.log(i);
+// });
 
-console.log("=============================");
+// console.log("=============================");
 
-//* while loop
-let i = 0;
-while (i < todos.length) {
-  console.log(todos[i]);
-  i++;
-}
+// //* while loop
+// let i = 0;
+// while (i < todos.length) {
+//   console.log(todos[i]);
+//   i++;
+// }
 
-console.log("=============================");
+// console.log("=============================");
 
-//* do while loop
-let counterTwo = 10;
-do {
-  console.log(counterTwo);
-  counterTwo--;
-} while (counterTwo > 0);
+// //* do while loop
+// let counterTwo = 10;
+// do {
+//   console.log(counterTwo);
+//   counterTwo--;
+// } while (counterTwo > 0);
 
-console.log("=============================");
+// console.log("=============================");
 
-//* forEach
-todos.forEach(i => {
-  console.log(i);
-});
+// //* forEach
+// todos.forEach(i => {
+//   console.log(i);
+// });
 
-console.log("=============================");
+// console.log("=============================");
