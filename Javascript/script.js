@@ -234,9 +234,20 @@ while (i < todos.length) {
   i++;
 }
 
+console.log("=============================");
+
 //* do while loop
 let counterTwo = 10;
 do {
   console.log(counterTwo);
   counterTwo--;
 } while (counterTwo > 0);
+
+console.log("=============================");
+
+//* forEach
+todos.forEach(i => {
+  console.log(i);
+});
+
+console.log("=============================");
