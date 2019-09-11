@@ -111,65 +111,64 @@
 //?======================================
 //! Exercise 7 (Facebook App)
 
-// let database = [
-//   {
-//     username: "Nathan",
-//     password: "password"
-//   },
-//   {
-//     username: "Stanley",
-//     password: "stanpass"
-//   }
-// ];
+let database = [
+  {
+    username: "Nathan",
+    password: "password"
+  },
+  {
+    username: "Stanley",
+    password: "stanpass"
+  }
+];
 
-// let newsfeed = [
-//   {
-//     username: "Bobby",
-//     timeline: "So tired from all that learning!"
-//   },
-//   {
-//     username: "Sally",
-//     timeline: "Javascript is sooooo cool!"
-//   },
-//   {
-//     username: "Mitch",
-//     timeline: "Javascript is preeetyy cool!"
-//   }
-// ];
+let newsfeed = [
+  {
+    username: "Bobby",
+    timeline: "So tired from all that learning!"
+  },
+  {
+    username: "Sally",
+    timeline: "Javascript is sooooo cool!"
+  },
+  {
+    username: "Mitch",
+    timeline: "Javascript is preeetyy cool!"
+  }
+];
 
-// var userNamePrompt = prompt("Enter Username Below:");
-// var userPasswordPrompt = prompt("Enter Password Below:");
+var userNamePrompt = prompt("Enter Username Below:");
+var userPasswordPrompt = prompt("Enter Password Below:");
 
-// for (let o of database) {
-//   console.log(o);
-// }
+for (let o of database) {
+  console.log(o);
+}
 
-// for (let i = 0; i < database.length; i++) {
-// debugger;
-// function signIn(user, pass) {
-//   if (user === database[i].username && pass === database[i].password) {
-//     alert(`Welcome, ${userNamePrompt}`);
-//     console.log(newsfeed);
-//   } else {
-//     alert(
-//       `Sorry ${userNamePrompt}, Your password seems to be Invalid. Please Try Again`
-//     );
-//   }
-// }
+for (let i = 0; i < database.length; i++) {
+  function signIn(user, pass) {
+    if (user === database[i].username && pass === database[i].password) {
+      alert(`Welcome, ${userNamePrompt}`);
+      console.log(newsfeed);
+    } else {
+      alert(
+        `Sorry ${userNamePrompt}, Your password seems to be Invalid. Please Try Again`
+      );
+    }
+  }
 
-//   if (
-//     userNamePrompt === database[i].username &&
-//     userPasswordPrompt === database[i].password
-//   ) {
-//     alert(`Welcome, ${userNamePrompt}`);
-//   } else {
-//     alert(
-//       `Sorry ${userNamePrompt}, Your password seems to be Invalid. Please Try Again`
-//     );
-//   }
-// }
+  if (
+    userNamePrompt === database[i].username &&
+    userPasswordPrompt === database[i].password
+  ) {
+    alert(`Welcome, ${userNamePrompt}`);
+  } else {
+    alert(
+      `Sorry ${userNamePrompt}, Your password seems to be Invalid. Please Try Again`
+    );
+  }
+}
 
-// signIn(userNamePrompt, userPasswordPrompt);
+signIn(userNamePrompt, userPasswordPrompt);
 
 //?======================================
 //! Javascript Terminology
