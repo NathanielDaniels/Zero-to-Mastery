@@ -216,19 +216,26 @@ let newsfeed = [
   }
 ];
 
-for (let i = 0; i < database.length; i++) {
-  function signIn(username, password) {
+function isUserValid(username, password) {
+  for (let i = 0; i < database.length; i++) {
     if (
       database[i].username === username &&
       database[i].password === password
     ) {
-      console.log(`Welcome, ${username}`);
-      console.log(newsfeed);
-    } else {
-      alert(
-        `Sorry ${username}, Your Username or Password seems to be Invalid. Please Try Again`
-      );
+      return true;
     }
+  }
+  return false;
+}
+
+function signIn(username, password) {
+  if (isUserValid(username, password) === true) {
+    console.log(`Welcome, ${username}`);
+    console.log(newsfeed);
+  } else {
+    alert(
+      `Sorry ${username}, Your Username or Password seems to be Invalid. Please Try Again`
+    );
   }
 }
 
