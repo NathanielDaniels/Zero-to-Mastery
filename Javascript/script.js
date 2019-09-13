@@ -190,58 +190,58 @@
 //?======================================
 //! Exercise 7 (Facebook App)
 
-let database = [
-  {
-    username: "Nathan",
-    password: "nathan"
-  },
-  {
-    username: "Stanley",
-    password: "stanley"
-  }
-];
+// let database = [
+//   {
+//     username: "Nathan",
+//     password: "nathan"
+//   },
+//   {
+//     username: "Stanley",
+//     password: "stanley"
+//   }
+// ];
 
-let newsfeed = [
-  {
-    username: "Bobby",
-    timeline: "So tired from all that learning!"
-  },
-  {
-    username: "Sally",
-    timeline: "Javascript is sooooo cool!"
-  },
-  {
-    username: "Mitch",
-    timeline: "Javascript is preeetyy cool!"
-  }
-];
+// let newsfeed = [
+//   {
+//     username: "Bobby",
+//     timeline: "So tired from all that learning!"
+//   },
+//   {
+//     username: "Sally",
+//     timeline: "Javascript is sooooo cool!"
+//   },
+//   {
+//     username: "Mitch",
+//     timeline: "Javascript is preeetyy cool!"
+//   }
+// ];
 
-function isUserValid(username, password) {
-  for (let i = 0; i < database.length; i++) {
-    if (
-      database[i].username === username &&
-      database[i].password === password
-    ) {
-      return true;
-    }
-  }
-  return false;
-}
+// function isUserValid(username, password) {
+//   for (let i = 0; i < database.length; i++) {
+//     if (
+//       database[i].username === username &&
+//       database[i].password === password
+//     ) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
 
-function signIn(username, password) {
-  if (isUserValid(username, password) === true) {
-    console.log(`Welcome, ${username}`);
-    console.log(newsfeed);
-  } else {
-    alert(
-      `Sorry ${username}, Your Username or Password seems to be Invalid. Please Try Again`
-    );
-  }
-}
+// function signIn(username, password) {
+//   if (isUserValid(username, password) === true) {
+//     console.log(`Welcome, ${username}`);
+//     console.log(newsfeed);
+//   } else {
+//     alert(
+//       `Sorry ${username}, Your Username or Password seems to be Invalid. Please Try Again`
+//     );
+//   }
+// }
 
-var userNamePrompt = prompt("Enter Username Below:");
-var userPasswordPrompt = prompt("Enter Password Below:");
-signIn(userNamePrompt, userPasswordPrompt);
+// var userNamePrompt = prompt("Enter Username Below:");
+// var userPasswordPrompt = prompt("Enter Password Below:");
+// signIn(userNamePrompt, userPasswordPrompt);
 
 //?======================================
-//! Javascript Keywords
+//! DOM
