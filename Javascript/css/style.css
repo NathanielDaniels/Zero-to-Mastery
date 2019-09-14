@@ -36,4 +36,8 @@ h1 {
   cursor: pointer;
   padding: 5px 10px;
 }
+
+ul li {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */

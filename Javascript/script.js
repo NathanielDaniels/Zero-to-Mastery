@@ -273,3 +273,12 @@ input.addEventListener("keyup", function(event) {
     btn.click();
   }
 });
+
+let deleteItem = () => {
+  for (let i = 0; i < li.length; i++) {
+    li[i].addEventListener("click", () => {
+      console.log("deleted");
+    });
+    console.log(li[i]);
+  }
+};
