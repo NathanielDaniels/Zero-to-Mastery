@@ -246,21 +246,15 @@
 // ?======================================
 // ! DOM
 
-const secondListItem = document.querySelectorAll("li")[1];
-
-secondListItem.innerText = "New List Item";
-secondListItem.style.color = "red";
-
-let button = document.createElement("button");
-button.innerText = "button";
-
 const btn = document.getElementById("btn");
+const li = document.getElementsByTagName("li");
+const list = document.getElementById("list");
+const input = document.getElementsByTagName("input")[0];
 
-let insertBtn = btn.append(button);
+btn.addEventListener("click", () => {
+  const newItem = document.createElement("li");
+  let newText = input.value;
 
-btn.addEventListener("click", button => {
-  const button2 = document.createElement("button");
-  button2.innerText = "button2";
-  const btn2 = document.getElementById("btn2");
-  btn2.append(button2);
+  newItem.innerText = newText;
+  list.append(newItem);
 });
