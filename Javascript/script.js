@@ -244,4 +244,11 @@
 // signIn(userNamePrompt, userPasswordPrompt);
 
 // ?======================================
-// ! Testing
+// ! DOM
+
+const secondListItem = document.querySelectorAll("li")[1];
+
+console.log(secondListItem);
+
+secondListItem.innerText = "New List Item";
+secondListItem.style.color = "red";
