@@ -255,6 +255,10 @@ btn.addEventListener("click", () => {
   const newItem = document.createElement("li");
   let newText = input.value;
 
+  //add input.value to list item
   newItem.innerText = newText;
   list.append(newItem);
+
+  //remove innerText from input.value
+  input.value = "";
 });
