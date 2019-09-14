@@ -30,6 +30,7 @@ h1 {
   padding: 5px;
   margin-right: 5px;
   width: 250px;
+  font-size: 1.5rem;
 }
 
 .inputContainer button {
@@ -38,6 +39,12 @@ h1 {
 }
 
 ul li {
+  font-size: 2rem;
   cursor: pointer;
+}
+
+ul li:hover {
+  color: red;
+  text-decoration: line-through;
 }
 /*# sourceMappingURL=style.css.map */

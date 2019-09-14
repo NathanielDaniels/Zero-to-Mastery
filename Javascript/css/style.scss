@@ -21,6 +21,7 @@ h1 {
     padding: 5px;
     margin-right: 5px;
     width: 250px;
+    font-size: 1.5rem;
   }
   button {
     cursor: pointer;
@@ -30,6 +31,11 @@ h1 {
 
 ul {
   li {
+    font-size: 2rem;
     cursor: pointer;
+    &:hover {
+      color: red;
+      text-decoration: line-through;
+    }
   }
 }

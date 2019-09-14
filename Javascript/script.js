@@ -251,6 +251,9 @@ const li = document.getElementsByTagName("li");
 const list = document.getElementById("list");
 const input = document.getElementsByTagName("input")[0];
 
+console.log(li.length);
+
+//* btn click
 btn.addEventListener("click", () => {
   const newItem = document.createElement("li");
   let newText = input.value;
@@ -261,9 +264,17 @@ btn.addEventListener("click", () => {
 
   //remove innerText from input.value
   input.value = "";
+
+  // if (li.length > 0) {
+  //   li[0].remove();
+  // } else {
+  //   deleteItem();
+  // }
+
+  deleteItem();
 });
 
-// Execute when the user press Enter
+//* Execute when the user press Enter
 input.addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
@@ -274,11 +285,12 @@ input.addEventListener("keyup", function(event) {
   }
 });
 
-let deleteItem = () => {
+//* Delete List Item on Click
+function deleteItem() {
   for (let i = 0; i < li.length; i++) {
     li[i].addEventListener("click", () => {
+      li[i].remove(li[i]);
       console.log("deleted");
     });
-    console.log(li[i]);
   }
-};
+}
