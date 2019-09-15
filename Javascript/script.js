@@ -255,15 +255,17 @@ console.log(li.length);
 
 //* btn click
 btn.addEventListener("click", () => {
-  const newItem = document.createElement("li");
-  let newText = input.value;
+  if (input.value.length > 0) {
+    const newItem = document.createElement("li");
+    let newText = input.value;
 
-  //add input.value to list item
-  newItem.innerText = newText;
-  list.append(newItem);
+    //add input.value to list item
+    newItem.innerText = newText;
+    list.append(newItem);
 
-  //remove innerText from input.value
-  input.value = "";
+    //remove innerText from input.value
+    input.value = "";
+  }
 
   // if (li.length > 0) {
   //   li[0].remove();
@@ -275,7 +277,7 @@ btn.addEventListener("click", () => {
 });
 
 //* Execute when the user press Enter
-input.addEventListener("keyup", function(event) {
+input.addEventListener("keypress", function(event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
     // Cancel the default action, if needed
