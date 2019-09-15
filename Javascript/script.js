@@ -289,7 +289,8 @@ input.addEventListener("keyup", function(event) {
 function deleteItem() {
   for (let i = 0; i < li.length; i++) {
     li[i].addEventListener("click", () => {
-      li[i].remove(li[i]);
+      // li[i].remove(li[i]);
+      li[i].parentNode.removeChild(li[i]);
       console.log("deleted");
     });
   }
