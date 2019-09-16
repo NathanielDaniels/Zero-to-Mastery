@@ -33,9 +33,17 @@ ul {
   li {
     font-size: 2rem;
     cursor: pointer;
+    display: flex;
     &:hover {
       color: red;
-      text-decoration: line-through;
+      // text-decoration: line-through;
     }
+  }
+  .done {
+    display: flex;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 10px;
   }
 }

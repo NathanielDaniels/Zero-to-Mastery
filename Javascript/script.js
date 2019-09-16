@@ -263,14 +263,11 @@ function addListAfterClick() {
     //remove innerText from input.value
     input.value = "";
   }
-  deleteItem();
+  // deleteItem();
+  toggleDelete();
 }
 
-//* btn click
-btn.addEventListener("click", addListAfterClick);
-
-//* Execute when the user press Enter
-input.addEventListener("keypress", function(event) {
+function addListAfterKeypress(event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
     // Cancel the default action, if needed
@@ -278,15 +275,32 @@ input.addEventListener("keypress", function(event) {
     // Trigger the button element with a click
     btn.click();
   }
-});
+}
 
-//* Delete List Item on Click
-function deleteItem() {
+btn.addEventListener("click", addListAfterClick);
+input.addEventListener("keypress", addListAfterKeypress);
+// li.addEventListener("click", () => {});
+
+// function deleteItem() {
+//   for (let i = 0; i < li.length; i++) {
+//     li[i].addEventListener("click", () => {
+//       // li[i].remove(li[i]);
+//       li[i].parentNode.removeChild(li[i]);
+//       console.log("deleted");
+//     });
+//   }
+// }
+
+function toggleDelete() {
+  let delBtn = document.createElement("button");
+  delBtn.innerText = "Delete";
+  delBtn.style.background = "red";
+  delBtn.style.color = "white";
+
   for (let i = 0; i < li.length; i++) {
     li[i].addEventListener("click", () => {
-      // li[i].remove(li[i]);
-      li[i].parentNode.removeChild(li[i]);
-      console.log("deleted");
+      li[i].append(delBtn);
+      console.log(delBtn);
     });
   }
 }
