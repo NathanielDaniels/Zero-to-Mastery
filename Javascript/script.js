@@ -256,6 +256,7 @@ console.log(li.length);
 function addListAfterClick() {
   if (input.value.length > 0) {
     const newItem = document.createElement("li");
+    newItem.style.position = "absolute";
     let newText = input.value;
     //add input.value to list item
     newItem.innerText = newText;
@@ -296,11 +297,20 @@ function toggleDelete() {
   delBtn.innerText = "Delete";
   delBtn.style.background = "red";
   delBtn.style.color = "white";
+  delBtn.style.cursor = "pointer";
 
   for (let i = 0; i < li.length; i++) {
     li[i].addEventListener("click", () => {
       li[i].append(delBtn);
-      console.log(delBtn);
+      li[i].classList.toggle("done");
+
+      if (li[i].classList == "done") {
+        delBtn.style.display = "block";
+        delBtn.style.marginLeft = "10px";
+        delBtn.style.padding = "2px 5px";
+      } else {
+        delBtn.style.display = "none";
+      }
     });
   }
 }
