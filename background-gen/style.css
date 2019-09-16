@@ -15,6 +15,11 @@ body {
   background: linear-gradient(to right, #ffff00, #ff0000); /* Standard syntax */
 }
 
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
 h1 {
   font: 600 3.5em "Raleway", sans-serif;
   color: #fff;
