@@ -253,28 +253,21 @@ const input = document.getElementsByTagName("input")[0];
 
 console.log(li.length);
 
-//* btn click
-btn.addEventListener("click", () => {
+function addListAfterClick() {
   if (input.value.length > 0) {
     const newItem = document.createElement("li");
     let newText = input.value;
-
     //add input.value to list item
     newItem.innerText = newText;
     list.append(newItem);
-
     //remove innerText from input.value
     input.value = "";
   }
-
-  // if (li.length > 0) {
-  //   li[0].remove();
-  // } else {
-  //   deleteItem();
-  // }
-
   deleteItem();
-});
+}
+
+//* btn click
+btn.addEventListener("click", addListAfterClick);
 
 //* Execute when the user press Enter
 input.addEventListener("keypress", function(event) {
