@@ -251,12 +251,12 @@ const li = document.getElementsByTagName("li");
 const list = document.getElementById("list");
 const input = document.getElementsByTagName("input")[0];
 
-console.log(li.length);
+// console.log(li.length);
 
 function addListAfterClick() {
   if (input.value.length > 0) {
     const newItem = document.createElement("li");
-    newItem.style.position = "absolute";
+    newItem.style.width = "50px";
     let newText = input.value;
     //add input.value to list item
     newItem.innerText = newText;
@@ -280,7 +280,6 @@ function addListAfterKeypress(event) {
 
 btn.addEventListener("click", addListAfterClick);
 input.addEventListener("keypress", addListAfterKeypress);
-// li.addEventListener("click", () => {});
 
 // function deleteItem() {
 //   for (let i = 0; i < li.length; i++) {
@@ -295,9 +294,6 @@ input.addEventListener("keypress", addListAfterKeypress);
 function toggleDelete() {
   let delBtn = document.createElement("button");
   delBtn.innerText = "Delete";
-  delBtn.style.background = "red";
-  delBtn.style.color = "white";
-  delBtn.style.cursor = "pointer";
 
   for (let i = 0; i < li.length; i++) {
     li[i].addEventListener("click", () => {
@@ -305,12 +301,20 @@ function toggleDelete() {
       li[i].classList.toggle("done");
 
       if (li[i].classList == "done") {
+        delBtn.classList = "done";
         delBtn.style.display = "block";
-        delBtn.style.marginLeft = "10px";
-        delBtn.style.padding = "2px 5px";
       } else {
         delBtn.style.display = "none";
       }
     });
   }
+  //* Click Delete Btn
+  delBtn.addEventListener("click", () => {
+    for (let i = 0; i < li.length; i++) {
+      // li[i].parentNode.removeChild(li[i]);
+      delBtn.parentNode.remove();
+      console.log("deleted");
+      // console.log(event.target);
+    }
+  });
 }
