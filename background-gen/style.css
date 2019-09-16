@@ -37,7 +37,6 @@ h3 {
 .colorInfo {
   position: absolute;
   width: 100%;
-
   bottom: 50px;
   left: 50%;
   transform: translate(-50%);
@@ -58,8 +57,10 @@ input {
 
 .randomButton {
   padding: 10px;
-  position: relative;
-  top: -60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
   text-transform: uppercase;
   cursor: pointer;
 }

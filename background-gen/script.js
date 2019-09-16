@@ -15,5 +15,22 @@ color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 
 randomButton.addEventListener("click", () => {
-  setGradient(random()); //! FIGURE THIS OUT
+  body.style.background = `linear-gradient(60deg, ${getRandomColor()},${getRandomColor()})  `;
+  css.textContent = `${body.style.background};`;
+  setRandomColor();
 });
+
+function getRandomColor() {
+  var letters = "0123456789ABCDEF";
+  var color = "#";
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+//! Trying to change color pallot to random color generated
+function setRandomColor() {
+  color1.value = getRandomColor();
+  color2.value = getRandomColor();
+}
