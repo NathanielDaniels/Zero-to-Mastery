@@ -418,14 +418,14 @@
 // let { wizardLevel } = obj;
 
 //! Object Properties (Dynamic)
-const name = "john snow";
+// const name = "john snow";
 
-const obj = {
-  [name]: "hello",
-  ["ray" + "smith"]: "hihi"
-};
+// const obj = {
+//   [name]: "hello",
+//   ["ray" + "smith"]: "hihi"
+// };
 
-console.log(obj);
+// console.log(obj);
 
 //==============
 
