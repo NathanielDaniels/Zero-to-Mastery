@@ -320,13 +320,75 @@
 // }
 
 // ?======================================
+//! Advanced Control Flow
+
 // ! Ternary
 
-function isUserValid(valid) {
-  return valid;
-}
+// function isUserValid(valid) {
+//   return valid;
+// }
 
-let answer = isUserValid(true) ? "You may enter" : "Access Denied";
+// let answer = isUserValid(false) ? "You may enter" : "Access Denied";
 
-let automatedAnswer =
-  "Your Account # is " + (isUserValid(true) ? "1234" : "not available");
+// let automatedAnswer =
+//   "Your Account # is " + (isUserValid(false) ? "1234" : "not available");
+
+// let condition = () => {
+//   if (isUserValid(true)) {
+//     return "You may Enter";
+//   } else {
+//     return "Access Denied";
+//   }
+// };
+
+// let answer2 = condition();
+
+// ! Switch Statement
+
+// function moveCommand(direction) {
+//   let whatHappens;
+//   switch (direction) {
+//     case "forward":
+//       whatHappens = "you encounter a monster";
+//       break;
+//     case "back":
+//       whatHappens = "you encounter a pathway";
+//       break;
+//     case "left":
+//       whatHappens = "you encounter a door";
+//       break;
+//     case "right":
+//       whatHappens = "you encounter a castle";
+//       break;
+//     default:
+//       whatHappens = "please enter a valid direction";
+//   }
+//   return whatHappens;
+// }
+
+// moveCommand("left");
+
+//* Built on my own
+// function newSwitch(direction) {
+//   let movingdirection;
+//   switch (direction) {
+//     case "top":
+//       movingdirection = "to the top";
+//       break;
+//     case "bottom":
+//       movingdirection = "to the bottom";
+//       break;
+//     case "left":
+//       movingdirection = "to the left";
+//       break;
+//     case "right":
+//       movingdirection = "to the right";
+//       break;
+//     default:
+//       movingdirection = "enter correct direction";
+//       break;
+//   }
+//   return movingdirection;
+// }
+
+// console.log(newSwitch("right"));
