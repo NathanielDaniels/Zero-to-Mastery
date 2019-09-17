@@ -398,11 +398,11 @@
 
 //! Arrow Functions
 
-let arrow = () => console.log("test");
+// let arrow = () => console.log("test");
 
-let arrow2 = function arrow2() {
-  console.log("test2");
-};
+// let arrow2 = function arrow2() {
+//   console.log("test2");
+// };
 
 // const obj = {
 //   player: "bobby",
@@ -418,11 +418,41 @@ let arrow2 = function arrow2() {
 // let { wizardLevel } = obj;
 
 //! Object Properties (Dynamic)
-const name = "john snow";
+// const name = "john snow";
 
-const obj = {
-  [name]: "hello",
-  ["ray" + "smith"]: "hihi"
-};
+// const obj = {
+//   [name]: "hello",
+//   ["ray" + "smith"]: "hihi"
+// };
 
-console.log(obj);
+// console.log(obj);
+
+//==============
+
+// const a = "simon";
+// const b = true;
+// const c = {};
+
+// const obj = {
+//   a,
+//   b,
+//   c
+// };
+
+// console.log(obj);
+
+//==============
+//! Default Arguments
+
+// function greet(name = "", age = 30, pet = "cat") {
+//   console.log(`name = ${name}, age = ${age}, pet = ${pet}`);
+// }
+
+// greet("billy", 24, "dog");
+
+//==============
+//! Symbols
+
+// let sym1 = Symbol();
+// let sym2 = Symbol("foo");
+// let sym3 = Symbol("foo1");
