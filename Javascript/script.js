@@ -244,7 +244,7 @@
 // signIn(userNamePrompt, userPasswordPrompt);
 
 // ?======================================
-// ! DOM
+// ! DOM (Todo List Project)
 
 // const btn = document.getElementById("btn");
 // const li = document.getElementsByTagName("li");
@@ -418,28 +418,28 @@
 // let { wizardLevel } = obj;
 
 //! Object Properties (Dynamic)
-// const name = "john snow";
+const name = "john snow";
 
-// const obj = {
-//   [name]: "hello",
-//   ["ray" + "smith"]: "hihi"
-// };
+const obj = {
+  [name]: "hello",
+  ["ray" + "smith"]: "hihi"
+};
 
-// console.log(obj);
+console.log(obj);
 
 //==============
 
-// const a = "simon";
-// const b = true;
-// const c = {};
+const a = "simon";
+const b = true;
+const c = {};
 
-// const obj = {
-//   a,
-//   b,
-//   c
-// };
+const obj = {
+  a,
+  b,
+  c
+};
 
-// console.log(obj);
+console.log(obj);
 
 //==============
 //! Default Arguments
