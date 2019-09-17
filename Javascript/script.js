@@ -392,3 +392,37 @@
 // }
 
 // console.log(newSwitch("right"));
+
+// ?======================================
+//! ECMAScript6 (ES6)
+
+//! Arrow Functions
+
+let arrow = () => console.log("test");
+
+let arrow2 = function arrow2() {
+  console.log("test2");
+};
+
+// const obj = {
+//   player: "bobby",
+//   experience: 100,
+//   wizardLevel: false
+// };
+
+// const player = obj.player;
+// const experience = obj.experience;
+// const wizardLevel = obj.wizardLevel;
+
+// const { player, experience } = obj;
+// let { wizardLevel } = obj;
+
+//! Object Properties (Dynamic)
+const name = "john snow";
+
+const obj = {
+  [name]: "hello",
+  ["ray" + "smith"]: "hihi"
+};
+
+console.log(obj);
