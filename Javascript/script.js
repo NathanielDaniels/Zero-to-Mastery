@@ -246,75 +246,87 @@
 // ?======================================
 // ! DOM
 
-const btn = document.getElementById("btn");
-const li = document.getElementsByTagName("li");
-const list = document.getElementById("list");
-const input = document.getElementsByTagName("input")[0];
+// const btn = document.getElementById("btn");
+// const li = document.getElementsByTagName("li");
+// const list = document.getElementById("list");
+// const input = document.getElementsByTagName("input")[0];
 
-// console.log(li.length);
+// // console.log(li.length);
 
-function addListAfterClick() {
-  if (input.value.length > 0) {
-    const newItem = document.createElement("li");
-    newItem.style.width = "50px";
-    let newText = input.value;
-    //add input.value to list item
-    newItem.innerText = newText;
-    list.append(newItem);
-    //remove innerText from input.value
-    input.value = "";
-  }
-  // deleteItem();
-  toggleDelete();
-}
+// function addListAfterClick() {
+//   if (input.value.length > 0) {
+//     const newItem = document.createElement("li");
+//     newItem.style.width = "50px";
+//     let newText = input.value;
+//     //add input.value to list item
+//     newItem.innerText = newText;
+//     list.append(newItem);
+//     //remove innerText from input.value
+//     input.value = "";
+//   }
+//   // deleteItem();
+//   toggleDelete();
+// }
 
-function addListAfterKeypress(event) {
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode === 13) {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // Trigger the button element with a click
-    btn.click();
-  }
-}
-
-btn.addEventListener("click", addListAfterClick);
-input.addEventListener("keypress", addListAfterKeypress);
-
-// function deleteItem() {
-//   for (let i = 0; i < li.length; i++) {
-//     li[i].addEventListener("click", () => {
-//       // li[i].remove(li[i]);
-//       li[i].parentNode.removeChild(li[i]);
-//       console.log("deleted");
-//     });
+// function addListAfterKeypress(event) {
+//   // Number 13 is the "Enter" key on the keyboard
+//   if (event.keyCode === 13) {
+//     // Cancel the default action, if needed
+//     event.preventDefault();
+//     // Trigger the button element with a click
+//     btn.click();
 //   }
 // }
 
-function toggleDelete() {
-  let delBtn = document.createElement("button");
-  delBtn.innerText = "Delete";
+// btn.addEventListener("click", addListAfterClick);
+// input.addEventListener("keypress", addListAfterKeypress);
 
-  for (let i = 0; i < li.length; i++) {
-    li[i].addEventListener("click", () => {
-      li[i].append(delBtn);
-      li[i].classList.toggle("done");
+// // function deleteItem() {
+// //   for (let i = 0; i < li.length; i++) {
+// //     li[i].addEventListener("click", () => {
+// //       // li[i].remove(li[i]);
+// //       li[i].parentNode.removeChild(li[i]);
+// //       console.log("deleted");
+// //     });
+// //   }
+// // }
 
-      if (li[i].classList == "done") {
-        delBtn.classList = "done";
-        delBtn.style.display = "block";
-      } else {
-        delBtn.style.display = "none";
-      }
-    });
-  }
-  //* Click Delete Btn
-  delBtn.addEventListener("click", () => {
-    for (let i = 0; i < li.length; i++) {
-      // li[i].parentNode.removeChild(li[i]);
-      delBtn.parentNode.remove();
-      console.log("deleted");
-      // console.log(event.target);
-    }
-  });
+// function toggleDelete() {
+//   let delBtn = document.createElement("button");
+//   delBtn.innerText = "Delete";
+
+//   for (let i = 0; i < li.length; i++) {
+//     li[i].addEventListener("click", () => {
+//       li[i].append(delBtn);
+//       li[i].classList.toggle("done");
+
+//       if (li[i].classList == "done") {
+//         delBtn.classList = "done";
+//         delBtn.style.display = "block";
+//       } else {
+//         delBtn.style.display = "none";
+//       }
+//     });
+//   }
+//   //* Click Delete Btn
+//   delBtn.addEventListener("click", () => {
+//     for (let i = 0; i < li.length; i++) {
+//       // li[i].parentNode.removeChild(li[i]);
+//       delBtn.parentNode.remove();
+//       console.log("deleted");
+//       // console.log(event.target);
+//     }
+//   });
+// }
+
+// ?======================================
+// ! Ternary
+
+function isUserValid(valid) {
+  return valid;
 }
+
+let answer = isUserValid(true) ? "You may enter" : "Access Denied";
+
+let automatedAnswer =
+  "Your Account # is " + (isUserValid(true) ? "1234" : "not available");
