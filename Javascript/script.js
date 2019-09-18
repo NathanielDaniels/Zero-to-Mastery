@@ -429,17 +429,17 @@
 
 //==============
 
-const a = "simon";
-const b = true;
-const c = {};
+// const a = "simon";
+// const b = true;
+// const c = {};
 
-const obj = {
-  a,
-  b,
-  c
-};
+// const obj = {
+//   a,
+//   b,
+//   c
+// };
 
-console.log(obj);
+// console.log(obj);
 
 //==============
 //! Default Arguments
@@ -456,3 +456,5 @@ console.log(obj);
 // let sym1 = Symbol();
 // let sym2 = Symbol("foo");
 // let sym3 = Symbol("foo1");
+
+// ?======================================
