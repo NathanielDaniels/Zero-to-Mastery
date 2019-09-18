@@ -458,3 +458,20 @@
 // let sym3 = Symbol("foo1");
 
 // ?======================================
+//! Advanced Functions
+
+const first = () => {
+  const greet = "hi";
+  function second() {
+    alert(greet);
+  }
+  return second;
+};
+
+let newFunc = first();
+newFunc();
+
+//*Currying
+const multiply = (a, b) => a * b;
+const curriedMultiply = a => b => a * b;
+const multiplyBy5 = curriedMultiply(5);
