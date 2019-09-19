@@ -521,6 +521,17 @@ const mapArray = array.map(num => num * 2);
 console.log("Map", mapArray);
 
 //* Filter
+const filterArray = array.filter(num => num < 5);
+//? Filter -> Just like Map, use Return (unless shorthand like above)
+console.log("filter", filterArray);
+
+//* Reduce
+const reduceArray = array.reduce((accumulator, num) => {
+  return accumulator + num;
+}, 0);
+//? Accumulator is something that stores info thats happens in the body. It adds one to the next, so 1 + 2 = 3, 3 + 10 = 13, 13 + 16 = 29. So it reduces the array down to one number
+
+console.log("reduce", reduceArray);
 
 //? =====================================
 //! Advanced Objects
