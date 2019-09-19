@@ -476,10 +476,9 @@
 //? Closures = A function ran. the Function Executed. It's NEVER going to be Execute again. But, it's going to remember references to those variables, so the child scope always has access to parent scope
 
 //*Currying
-// const multiply = (a, b) => a * b;
-// const curriedMultiply = a => b => console.log(a * b);
-// const multiplyBy5 = curriedMultiply(5);
-// // curriedMultiply(5)(5);
+const multiply = (a, b) => a * b;
+const curriedMultiply = a => b => console.log(a * b);
+const multiplyBy10 = curriedMultiply(10);
 
 // const one = a => {
 //   const two = b => {
@@ -491,15 +490,52 @@
 // let newOne = one();
 // newOne(5)(2);
 
+//* Compose
+const compose = (f, g) => a => f(g(a));
+const sum = num => num + 2;
+
+let composed = compose(
+  sum,
+  sum
+)(5);
+
+// console.log(composed);
+
+// Avoiding Side Effects, Functional Purity
 //==============================================
 //! Advanced Objects
 
-let object1 = { value: 10 };
-let object2 = object1;
-let object3 = { value: 10 };
+// let object1 = { value: 10 };
+// let object2 = object1;
+// let object3 = { value: 10 };
 
-const object4 = {
-  a: () => {
-    console.log(this);
-  }
-};
+// const object4 = {
+//   a: () => {
+//     console.log(this);
+//   }
+// };
+
+// class Player {
+//   constructor(name, type) {
+//     console.log(this);
+//     this.name = name;
+//     this.type = type;
+//   }
+//   introduce() {
+//     console.log(`Hi I'm ${this.name}, I'm a ${this.type}`);
+//   }
+// }
+
+// class Wizard extends Player {
+//   constructor(name, type) {
+//     super(name, type);
+//   }
+//   play() {
+//     console.log(`Weeeee I'm a ${this.type}`);
+//   }
+// }
+
+// const wizard1 = new Wizard("Nathan", "Dev");
+// const wizard2 = new Wizard("Billy", "Actor");
+
+// console.log(wizard1);
