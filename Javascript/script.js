@@ -460,18 +460,46 @@
 // ?======================================
 //! Advanced Functions
 
-const first = () => {
-  const greet = "hi";
-  function second() {
-    alert(greet);
-  }
-  return second;
-};
+// const first = () => {
+//   const greet = "hi";
+//   const name = "nathan";
+//   const second = () => {
+//     console.log(name);
+//     alert(greet);
+//   };
+//   return second;
+// };
 
-let newFunc = first();
-newFunc();
+// let newFunc = first();
+// newFunc();
+
+//? Closures = A function ran. the Function Executed. It's NEVER going to be Execute again. But, it's going to remember references to those variables, so the child scope always has access to parent scope
 
 //*Currying
-const multiply = (a, b) => a * b;
-const curriedMultiply = a => b => a * b;
-const multiplyBy5 = curriedMultiply(5);
+// const multiply = (a, b) => a * b;
+// const curriedMultiply = a => b => console.log(a * b);
+// const multiplyBy5 = curriedMultiply(5);
+// // curriedMultiply(5)(5);
+
+// const one = a => {
+//   const two = b => {
+//     console.log(a * b);
+//   };
+//   return two;
+// };
+
+// let newOne = one();
+// newOne(5)(2);
+
+//==============================================
+//! Advanced Objects
+
+let object1 = { value: 10 };
+let object2 = object1;
+let object3 = { value: 10 };
+
+const object4 = {
+  a: () => {
+    console.log(this);
+  }
+};
