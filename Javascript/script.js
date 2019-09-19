@@ -476,9 +476,9 @@
 //? Closures = A function ran. the Function Executed. It's NEVER going to be Execute again. But, it's going to remember references to those variables, so the child scope always has access to parent scope
 
 //*Currying
-const multiply = (a, b) => a * b;
-const curriedMultiply = a => b => console.log(a * b);
-const multiplyBy10 = curriedMultiply(10);
+// const multiply = (a, b) => a * b;
+// const curriedMultiply = a => b => console.log(a * b);
+// const multiplyBy10 = curriedMultiply(10);
 
 // const one = a => {
 //   const two = b => {
@@ -491,18 +491,38 @@ const multiplyBy10 = curriedMultiply(10);
 // newOne(5)(2);
 
 //* Compose
-const compose = (f, g) => a => f(g(a));
-const sum = num => num + 2;
+// const compose = (f, g) => a => f(g(a));
+// const sum = num => num + 2;
 
-let composed = compose(
-  sum,
-  sum
-)(5);
+// let composed = compose(
+//   sum,
+//   sum
+// )(5);
 
 // console.log(composed);
 
 // Avoiding Side Effects, Functional Purity
-//==============================================
+//? =====================================
+//! Advanced Arrays
+
+const array = [1, 2, 10, 16];
+
+const double = [];
+const newArray = array.forEach(num => {
+  double.push(num * 2);
+});
+console.log("forEach", double);
+
+//* MAP/ FILTER/ REDUCE
+
+//* Map
+const mapArray = array.map(num => num * 2);
+//? Map -> Always Must use Return (unless shorthand like above)
+console.log("Map", mapArray);
+
+//* Filter
+
+//? =====================================
 //! Advanced Objects
 
 // let object1 = { value: 10 };
