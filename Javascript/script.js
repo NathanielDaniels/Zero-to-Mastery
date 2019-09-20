@@ -505,33 +505,33 @@
 //? =====================================
 //! Advanced Arrays
 
-const array = [1, 2, 10, 16];
+// const array = [1, 2, 10, 16];
 
-const double = [];
-const newArray = array.forEach(num => {
-  double.push(num * 2);
-});
-console.log("forEach", double);
+// const double = [];
+// const newArray = array.forEach(num => {
+//   double.push(num * 2);
+// });
+// console.log("forEach", double);
 
 //* MAP/ FILTER/ REDUCE
 
 //* Map
-const mapArray = array.map(num => num * 2);
+// const mapArray = array.map(num => num * 2);
 //? Map -> Always Must use Return (unless shorthand like above)
-console.log("Map", mapArray);
+// console.log("Map", mapArray);
 
 //* Filter
-const filterArray = array.filter(num => num < 5);
+// const filterArray = array.filter(num => num < 5);
 //? Filter -> Just like Map, use Return (unless shorthand like above)
-console.log("filter", filterArray);
+// console.log("filter", filterArray);
 
 //* Reduce
-const reduceArray = array.reduce((accumulator, num) => {
-  return accumulator + num;
-}, 0);
+// const reduceArray = array.reduce((accumulator, num) => {
+// return accumulator + num;
+// }, 0);
 //? Accumulator is something that stores info thats happens in the body. It adds one to the next, so 1 + 2 = 3, 3 + 10 = 13, 13 + 16 = 29. So it reduces the array down to one number
 
-console.log("reduce", reduceArray);
+// console.log("reduce", reduceArray);
 
 //? =====================================
 //! Advanced Objects
