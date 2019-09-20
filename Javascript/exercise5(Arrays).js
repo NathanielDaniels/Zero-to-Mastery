@@ -26,39 +26,89 @@ const array = [
   }
 ];
 
-//Create an array using forEach that has all the usernames with a "!" to each of the usernames
+//? Create an array using forEach that has all the usernames with a "!" to each of the usernames
+// const newExited = [];
+// const exitedPeople = array.forEach(user => {
+//   let { username } = user;
+//   username = username + "!";
+//   newExited.push(username);
+// });
 
-const exitedPeople = array.forEach(a => (a.username += "!"));
+// console.log(array);
+// console.log(newExited);
 
-//Create an array using map that has all the usernames with a "?" to each of the usernames
+//===========
+// this seems to tod this same with less code
 
-const questionPeople = array.map(a => (a.username += "?"));
+// const forEachArray = [];
+// const newArray = array.forEach(user => {
+//   forEachArray.push(user.username + "!");
+// });
 
-//Filter the array to only include users who are on team: red
+// console.log(forEachArray);
+// console.log(array);
 
-const teamRed = array.filter(a => a.team == "red");
+//? Create an array using map that has all the usernames with a "?" to each of the usernames
 
-//Find out the total score of all users using reduce
+// const mapArray = array.map(user => {
+//   let { username } = user;
+//   return username + "?";
+// });
 
-const totalScore = array.reduce((accum, num) => {
-  return accum + num.score;
-}, 0);
+// console.log(array);
+// console.log(mapArray);
 
-console.log(totalScore);
+//===========
+// this seems to tod this same with less code
 
-// (1), what is the value of i?
-// (2), Make this map function pure:
-const arrayNum = [1, 2, 4, 5, 8, 9];
-const newArray = arrayNum.map((num, i) => {
-  console.log(num, i);
-  console.log("Num: ", num);
-  return num * 2;
+// const mapArray = array.map(user => {
+//   return user.username + "?";
+// });
+
+// console.log(array);
+// console.log(mapArray);
+
+//? Filter the array to only include users who are on team: red
+
+// const filterArray = array.filter(user => {
+//   // let { team } = user;
+//   // return team === "red";
+//   return user.team === "red";
+// });
+
+// console.log(array);
+// console.log(filterArray);
+
+//? Find out the total score of all users using reduce
+
+// const totalScore = array.reduce((acc, num) => {
+//   return acc + num.score;
+// }, 0);
+
+// console.log("reduced to: ", totalScore);
+//?  (1), what is the value of i?
+//?  (2), Make this map function pure:
+// const arrayNum = [1, 2, 4, 5, 8, 9];
+// const newArray = arrayNum.map((num, i) => {
+//   return num * 2;
+// });
+
+//?? BONUS: create a new list with all user information, but add "!" to the end of each items they own.
+
+// const answer = array.map(user => {
+//   user.items = user.items.map(item => {
+//     return item + "!";
+//   });
+//   return user;
+// });
+
+// console.log(answer);
+
+const newList = array.map(user => {
+  user.items = user.items.map(item => {
+    return item + "!";
+  });
+  return user;
 });
 
-//BONUS: create a new list with all user information, but add "!" to the end of each items they own.
-
-const newItems = array.map(a => {
-  return a.items[a] + "!";
-});
-
-console.log(newItems);
+console.log(newList);
