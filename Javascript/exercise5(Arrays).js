@@ -104,11 +104,11 @@ const array = [
 
 // console.log(answer);
 
-const newList = array.map(user => {
-  user.items = user.items.map(item => {
-    return item + "!";
-  });
-  return user;
-});
+// const newList = array.map(user => {
+//   user.items = user.items.map(item => {
+//     return item + "!";
+//   });
+//   return user;
+// });
 
-console.log(newList);
+// console.log(newList);

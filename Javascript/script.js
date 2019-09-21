@@ -516,19 +516,19 @@
 //* MAP/ FILTER/ REDUCE
 
 //* Map
-const mapArray = array.map(num => num * 2);
+// const mapArray = array.map(num => num * 2);
 //? Map -> Always Must use Return (unless shorthand like above)
-console.log("Map", mapArray);
+// console.log("Map", mapArray);
 
 //* Filter
-const filterArray = array.filter(num => num < 5);
+// const filterArray = array.filter(num => num < 5);
 //? Filter -> Just like Map, use Return (unless shorthand like above)
-console.log("filter", filterArray);
+// console.log("filter", filterArray);
 
 //* Reduce
-const reduceArray = array.reduce((accumulator, num) => {
-  return accumulator + num;
-}, 0);
+// const reduceArray = array.reduce((accumulator, num) => {
+// return accumulator + num;
+// }, 0);
 //? Accumulator is something that stores info thats happens in the body. It adds one to the next, so 1 + 2 = 3, 3 + 10 = 13, 13 + 16 = 29. So it reduces the array down to one number
 
 // console.log("reduce", reduceArray);
@@ -536,26 +536,42 @@ const reduceArray = array.reduce((accumulator, num) => {
 //? =====================================
 //! Advanced Objects
 
-// let object1 = { value: 10 };
-// let object2 = object1;
-// let object3 = { value: 10 };
+//? reference type
+let object1 = { value: 10 };
+let object2 = object1;
+let object3 = { value: 10 };
 
-// const object4 = {
-//   a: () => {
-//     console.log(this);
-//   }
-// };
+//? context vs scope
+//* Scope is whats between the { Brackets } which can't be accessed outside of those brackets
 
-// class Player {
-//   constructor(name, type) {
-//     console.log(this);
-//     this.name = name;
-//     this.type = type;
-//   }
-//   introduce() {
-//     console.log(`Hi I'm ${this.name}, I'm a ${this.type}`);
-//   }
+// function b() {
+//   // scope
+//   let a = 4;
 // }
+// console.log(a); //not defined
+
+//* Context tells you where we are inside an object
+// console.log(this); // inside window object
+// this refers to what object you are inside of
+
+const object4 = {
+  a: () => {
+    console.log(this);
+    // this now refers to object4
+  }
+};
+
+//? instantiation
+class Player {
+  constructor(name, type) {
+    console.log(this);
+    this.name = name;
+    this.type = type;
+  }
+  introduce() {
+    console.log(`Hi I'm ${this.name}, I'm a ${this.type}`);
+  }
+}
 
 // class Wizard extends Player {
 //   constructor(name, type) {
