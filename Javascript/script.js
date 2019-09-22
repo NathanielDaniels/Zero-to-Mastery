@@ -716,7 +716,7 @@ b++;
 // console.log(cat); //true
 
 //* exponential operator (**)
-const square = x => x ** 2; // (**) = to the power of
-const cube = y => y ** 3;
-console.log(square(2));
-console.log(cube(2));
+// const square = x => x ** 2; // (**) = to the power of
+// const cube = y => y ** 3;
+// console.log(square(2));
+// console.log(cube(2));
