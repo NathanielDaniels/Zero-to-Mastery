@@ -537,9 +537,9 @@
 //! Advanced Objects
 
 //? reference type
-let object1 = { value: 10 };
-let object2 = object1;
-let object3 = { value: 10 };
+// let object1 = { value: 10 };
+// let object2 = object1;
+// let object3 = { value: 10 };
 
 //? context vs scope
 //* Scope is whats between the { Brackets } which can't be accessed outside of those brackets
@@ -554,17 +554,17 @@ let object3 = { value: 10 };
 // console.log(this); // inside window object
 // this refers to what object you are inside of
 
-const object4 = {
-  a: () => {
-    console.log(this);
-    // this now refers to object4
-  }
-};
+// const object4 = {
+//   a: () => {
+//     console.log(this);
+//     // this now refers to object4
+//   }
+// };
 
 //? instantiation
 class Player {
   constructor(name, type) {
-    console.log(this);
+    console.log("player: ", this);
     this.name = name;
     this.type = type;
   }
@@ -573,16 +573,24 @@ class Player {
   }
 }
 
-// class Wizard extends Player {
-//   constructor(name, type) {
-//     super(name, type);
-//   }
-//   play() {
-//     console.log(`Weeeee I'm a ${this.type}`);
-//   }
-// }
+class Wizard extends Player {
+  constructor(name, type) {
+    super(name, type);
+    console.log("wizard: ", this);
+    //* anytime you run *extends*, you have to run super(), with properties passed to constructor
+    //* super takes us up to the constructor of Player
+    //* *This* Becomes wizard (wizard.name, wizard.type)
+  }
+  play() {
+    console.log(`Weeeee I'm a ${this.type}`);
+  }
+}
 
-// const wizard1 = new Wizard("Nathan", "Dev");
-// const wizard2 = new Wizard("Billy", "Actor");
+const wizard1 = new Wizard("Shelly", "Healer");
+const wizard2 = new Wizard("Shawn", "Dark Magic");
 
-// console.log(wizard1);
+console.log("===========================");
+
+console.log(wizard1.introduce());
+console.log(wizard2.introduce());
+console.log(wizard2.play());
