@@ -720,3 +720,59 @@ b++;
 // const cube = y => y ** 3;
 // console.log(square(2));
 // console.log(cube(2));
+
+//?==========================================
+//! ES8
+//* padStart()
+//* padEnd()
+// These add padding?!
+
+console.log("turtle".padStart(10)); // "__________turtle"
+//this adds 10 spaces in front of "turtle"
+
+//*
+
+const fun = (a, b, c, d) => {
+  console.log(a);
+};
+
+console.log(fun(1, 2, 3, 4));
+
+//* Object values and entries
+//? Object.values;
+//? Object.entries;
+//? Object.keys
+
+let obj = {
+  username0: "santa",
+  username1: "Rudolf",
+  username2: "Mr. Grinch"
+};
+
+//? Turn Object into array with Object.keys()
+//* Keys are the "property values of an object (left of (:))"
+let keys = Object.keys(obj); // Turns object into Array
+console.log(keys); // [ username0, username1, username2 ]
+
+//? Iterate through objects
+Object.keys(obj).forEach((key, index) => {
+  console.log(key, obj[key]);
+});
+
+//* Find the object Values (right of (:))
+Object.values(obj).forEach(value => {
+  console.log("values", value);
+});
+
+//* Full Object Entries (Prints both key and value in seperate arrays)
+Object.entries(obj).forEach(value => {
+  console.log("entries", value);
+});
+
+// Change key names
+let newNames = Object.entries(obj).map(value => {
+  return value[1] + value[0].replace("username", "");
+});
+
+console.log(newNames);
+console.log(Object.values(obj));
