@@ -635,18 +635,57 @@ b++;
 //* let d = [].concat(c);
 //This clones c into a new array called d
 
-let obj = {
-  a: "a",
-  b: "b",
-  c: "c"
-};
+// let obj = {
+//   a: "a",
+//   b: "b",
+//   c: "c"
+// };
 
 //? How to assign Obj to a new place in memory (without reference)
 // run the object constructor and assign obj to a new object
-let newObj = Object.assign({}, obj);
+// let newObj = Object.assign({}, obj);
 
-console.log(newObj);
+// console.log("newObj", newObj);
 
-obj.c = 5;
-console.log(newObj);
-console.log(obj);
+// obj.c = 5;
+// console.log("newObj", newObj);
+// console.log("obj", obj);
+
+//! This is the same as running Object.assign()
+// let clone2 = { ...newObj };
+
+// newObj.b = 5;
+// console.log("newObj updated", newObj);
+
+// console.log("clone2/ no change", clone2);
+
+//? if you have a nested object
+
+// let obj2 = {
+//   a: "a",
+//   b: "b",
+//   c: { c: "Old C" } // This is another place in memory
+// };
+
+// console.log("original obj2", obj2);
+
+// object3 = { ...obj2 };
+
+// console.log(object3);
+
+// obj2.c.c = "NEW";
+
+// console.log("updated obj2", obj2);
+
+//!shadow cloning means you can only clone the first level inside an object. so when running the code from obj, even though we cloned everything like before, they would all show the nested object inside c. You need JSON to Clone multi levels
+
+// for some reason I can't get this to work
+
+//! IF this object is really deep, it could hurt performance.
+// let superClone = JSON.parse(JSON.stringify(obj2));
+
+// console.log("superClone", superClone);
+
+//?==========================================
+//! Type Coercion
+// Known To make people pull out their hair in frustration
