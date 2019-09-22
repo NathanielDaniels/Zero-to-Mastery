@@ -562,38 +562,91 @@
 // };
 
 //? instantiation
-class Player {
-  constructor(name, type) {
-    console.log("player: ", this);
-    this.name = name;
-    this.type = type;
-  }
-  introduce() {
-    console.log(`Hi I'm ${this.name}, I'm a ${this.type}`);
-  }
-}
+// class Player {
+//   constructor(name, type) {
+//     console.log("player: ", this);
+//     this.name = name;
+//     this.type = type;
+//   }
+//   introduce() {
+//     console.log(`Hi I'm ${this.name}, I'm a ${this.type}`);
+//   }
+// }
 
-class Wizard extends Player {
-  constructor(name, type) {
-    super(name, type);
-    console.log("wizard: ", this);
-    //* anytime you run *extends*, you have to run super(), with properties passed to constructor
-    //* super takes us up to the constructor of Player
-    //* *This* Becomes wizard (wizard.name, wizard.type)
-  }
-  play() {
-    console.log(`Weeeee I'm a ${this.type}`);
-  }
-}
+// class Wizard extends Player {
+//   constructor(name, type) {
+//     super(name, type);
+//     console.log("wizard: ", this);
+//     //* anytime you run *extends*, you have to run super(), with properties passed to constructor
+//     //* super takes us up to the constructor of Player
+//     //* *This* Becomes wizard (wizard.name, wizard.type)
+//   }
+//   play() {
+//     console.log(`Weeeee I'm a ${this.type}`);
+//   }
+// }
 
-const wizard1 = new Wizard("Shelly", "Healer");
-const wizard2 = new Wizard("Shawn", "Dark Magic");
+// const wizard1 = new Wizard("Shelly", "Healer");
+// const wizard2 = new Wizard("Shawn", "Dark Magic");
 
-console.log("===========================");
+// console.log("===========================");
 
-console.log(wizard1.introduce());
-console.log(wizard2.introduce());
-console.log(wizard2.play());
+// console.log(wizard1.introduce());
+// console.log(wizard2.introduce());
+// console.log(wizard2.play());
 
 //?==========================================
 //! By Reference vs By Value
+
+//* Pass By Value
+
+let a = 5;
+let b = a;
+
+b++;
+
+// console.log(b); //6 //No Longer Connected to a
+// console.log(a); //5
+
+//=========================
+//* Pass By Reference
+
+// let obj1 = { name: "nate", password: "123" };
+// let obj2 = obj1;
+
+// console.log(obj2); // { name: "nate", password: "123" };
+
+// console.log("-----------------");
+
+// obj2.password = "321";
+
+// console.log(obj1); // { name: "nate", password: "321" };
+// console.log(obj2); // { name: "nate", password: "321" }; // Stay the same
+
+//? pass by ref. also works on arrays
+
+// let c = [1, 2, 3, 4, 5];
+// let d = c;
+// d.push(534343);
+// console.log(d);
+// console.log(c);
+
+//? To stop this behavior...
+//* let d = [].concat(c);
+//This clones c into a new array called d
+
+let obj = {
+  a: "a",
+  b: "b",
+  c: "c"
+};
+
+//? How to assign Obj to a new place in memory (without reference)
+// run the object constructor and assign obj to a new object
+let newObj = Object.assign({}, obj);
+
+console.log(newObj);
+
+obj.c = 5;
+console.log(newObj);
+console.log(obj);
