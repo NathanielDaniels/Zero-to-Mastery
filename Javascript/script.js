@@ -700,3 +700,23 @@ b++;
 //   // 1 is True
 //   console.log("1 is true");
 // }
+
+//?==========================================
+//! ES7
+
+//* Includes()
+//? Includes tells you if something is inside an element. Below, we check if the string "hello" includes the letter "o", which is True
+// let newHello = "hello".includes("o");
+
+// console.log(newHello); //true
+
+//? Includes also works on Arrays
+// const pets = ["cat", "dog", "rabbit"];
+// const cat = pets.includes("cat");
+// console.log(cat); //true
+
+//* exponential operator (**)
+const square = x => x ** 2; // (**) = to the power of
+const cube = y => y ** 3;
+console.log(square(2));
+console.log(cube(2));
