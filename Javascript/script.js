@@ -689,3 +689,14 @@ b++;
 //?==========================================
 //! Type Coercion
 // Known To make people pull out their hair in frustration
+//* Type Coercion is when you use two equal signs (==) to find if they are equal. If the types aren't equal, it tries to "Coerce" it to be the same. which is why (2 == "2" (True))
+//* When using two equals signs for JavaScript equality testing, some funky conversions take place.
+//? Use 3 equal signs to find equal values without trying to Coerce. (2 === "2" (False))
+//? When using three equals signs for JavaScript equality testing, everything is as is. Nothing gets converted before being evaluated.
+
+//* This also works with if statements (typically 1 and 0 being Coerced into True or False).
+
+// if (1) {
+//   // 1 is True
+//   console.log("1 is true");
+// }
