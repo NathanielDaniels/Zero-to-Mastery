@@ -600,10 +600,10 @@
 
 //* Pass By Value
 
-let a = 5;
-let b = a;
+// let a = 5;
+// let b = a;
 
-b++;
+// b++;
 
 // console.log(b); //6 //No Longer Connected to a
 // console.log(a); //5
@@ -727,7 +727,7 @@ b++;
 //* padEnd()
 // These add padding?!
 
-console.log("turtle".padStart(10)); // "__________turtle"
+// console.log("turtle".padStart(10)); // "__________turtle"
 //this adds 10 spaces in front of "turtle"
 
 //* ===========================
@@ -779,3 +779,33 @@ console.log("turtle".padStart(10)); // "__________turtle"
 
 //?==========================================
 //! Advanced Loops!
+
+const basket = ["apples", "oranges", "grapes"];
+const detailedBasket = {
+  apples: 5,
+  oranges: 10,
+  grames: 1000
+};
+
+//? for loop
+for (let i = 0; i < basket.length; i++) {
+  console.log("for loop: ", basket[i]);
+}
+
+//? forEach
+basket.forEach(item => {
+  console.log("forEach: ", item);
+});
+
+//? for of
+// Iterating - arrays, strings
+//! for of loops do NOT work with Objects - Objects are Not Iterable
+for (item of basket) {
+  console.log("forOf loop", item);
+}
+
+//? for in - object properties
+// enumerating (enumerable properties) - objects
+for (item in detailedBasket) {
+  console.log("forIn: ", item);
+}
