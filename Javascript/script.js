@@ -776,3 +776,6 @@ console.log("turtle".padStart(10)); // "__________turtle"
 
 // console.log(newNames);
 // console.log(Object.values(obj));
+
+//?==========================================
+//! Advanced Loops!
