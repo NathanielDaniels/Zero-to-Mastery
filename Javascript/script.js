@@ -821,3 +821,57 @@
 
 //?==========================================
 //! How Javascript Works
+
+//? What is a program?
+//* Allocate Memory
+//* Parse and Execute scripts
+
+const a = 1; // we just allocated memory
+const b = 10;
+const c = 100;
+
+//* memory leaks happen when you have unused variables taking up space. It fills up the "Memory Heap"
+
+//* Call stack is what reads and executes our scripts
+
+const one = () => {
+  const two = () => {
+    console.log("4");
+  };
+  two();
+};
+
+one();
+
+//Asynchronous
+// setTimeout() is part of a webAPI (DOM (Document), AJAX(XMLHttpRequest), Timeout (setTimout))
+console.log("1");
+setTimeout(() => {
+  console.log("2");
+}, 2000);
+console.log("3");
+
+//! What Happens when you run setTimeout?
+
+// console.log("1") goes into the CALL STACK. This gets executed so we console log "1" to browser
+
+// Then runs setTimeout() which goes into the WebAPI to be run. The WebAPI starts a 2 second timer (in this case). While this is happening, the CALL STACK is empty and ready to take the next input.
+
+// console.log("3") goes into the CALL STACK. This gets executed so we console log "3" to browser
+
+// After the 2 seconds is up, the function inside setTimeout is run, but since its a callback, it gets moved to CALLBACK QUEUE. Then the EVENT LOOP checks if there is anything left inside CALL STACK. IF CALL STACK is empty, the CALLBACK QUEUE moves the function into the CALL STACK to be executed, which in this case, console logs "2"
+
+// So "1" gets logged first, then "3" gets logged before "2" (1,3,2)
+
+//* Javascript Runtime Environment
+//======================================
+// CALL STACK
+
+// WEB API
+
+// CALLBACK QUEUE
+
+// EVENT LOOP
+
+//======================================
+// Asynchronous vs synchronous
