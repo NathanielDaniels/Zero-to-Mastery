@@ -875,3 +875,8 @@ console.log("3");
 
 //======================================
 // Asynchronous vs synchronous
+
+//?==========================================
+//! Modules
+
+// use browserify to reduce the number of script tags used in an html document.
