@@ -880,3 +880,11 @@ console.log("3");
 //! Modules
 
 // use browserify to reduce the number of script tags used in an html document.
+
+//?==========================================
+//! Git/Github
+
+// Don't work on Master, Always branch
+
+//?==========================================
+//! NPM + NPM Scripts
