@@ -885,6 +885,9 @@ console.log("3");
 //! Git/Github
 
 // Don't work on Master, Always branch
+//? start new git branch w/ "git branch 'name'"
+//? check branches with "git branch"
+//? switch branches w/ "git checkout 'name'"
 
 //?==========================================
 //! NPM + NPM Scripts
