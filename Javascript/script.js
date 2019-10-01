@@ -885,6 +885,18 @@ console.log("3");
 //! Git/Github
 
 // Don't work on Master, Always branch
+//? check status of branchs w/ "git status"
+//? start new git branch w/ "git branch 'name'"
+//? check branches w/ "git branch"
+//? switch branches w/ "git checkout 'name'"
+//? get the latest branch commit w/ "git pull"
+//? merge branches w/ "git merge master"
 
+//* Keep Fork Up To Date
+//? git remote -v (You'll see current config remote repos for your fork)
+//? type "git remote add upstream <clone url>"
+//? verify with "git remote -v". Url for fork as 'origin', url for original repo as 'upstream'
+//Now, you can keep your fork synced with the upstream repository with a few Git commands.
+//One simple way is to do the below command from the master of your forked repository: git pull upstream master
 //?==========================================
 //! NPM + NPM Scripts
