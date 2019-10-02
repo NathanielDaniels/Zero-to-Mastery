@@ -899,4 +899,8 @@ console.log("3");
 //Now, you can keep your fork synced with the upstream repository with a few Git commands.
 //One simple way is to do the below command from the master of your forked repository: git pull upstream master
 //?==========================================
-//! NPM + NPM Scripts
+//! React
+
+//? Components always start with a Capital Letter
+//? Always remember to import/Export components
+//? Always have to render() a class
