@@ -908,6 +908,10 @@
 //?==========================================
 //! Promises
 
+//? A Promise is an object that may produce a single value some time in the future
+//? Either a resolved value, or a reson that it's not resolved (rejected)
+//* Promise's can be in 1 of 3 states (fullfilled (resolved), rejected, pending)
+
 // const promise = new Promise((resolve, reject) => {
 //   if (true) {
 //     resolve("suff Worked");
@@ -937,8 +941,10 @@ Promise.all(
   urls.map(url => {
     return fetch(url).then(resp => resp.json());
   })
-).then(results => {
-  console.log(results[0]);
-  console.log(results[2]);
-  console.log(results[3]);
-});
+)
+  .then(results => {
+    console.log(results[0]);
+    console.log(results[2]);
+    console.log(results[3]);
+  })
+  .catch(console.log("error"));
