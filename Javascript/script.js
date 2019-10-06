@@ -826,30 +826,30 @@
 //* Allocate Memory
 //* Parse and Execute scripts
 
-const a = 1; // we just allocated memory
-const b = 10;
-const c = 100;
+// const a = 1; // we just allocated memory
+// const b = 10;
+// const c = 100;
 
 //* memory leaks happen when you have unused variables taking up space. It fills up the "Memory Heap"
 
 //* Call stack is what reads and executes our scripts
 
-const one = () => {
-  const two = () => {
-    console.log("4");
-  };
-  two();
-};
+// const one = () => {
+//   const two = () => {
+//     console.log("4");
+//   };
+//   two();
+// };
 
-one();
+// one();
 
 //Asynchronous
 // setTimeout() is part of a webAPI (DOM (Document), AJAX(XMLHttpRequest), Timeout (setTimout))
-console.log("1");
-setTimeout(() => {
-  console.log("2");
-}, 2000);
-console.log("3");
+// console.log("1");
+// setTimeout(() => {
+//   console.log("2");
+// }, 2000);
+// console.log("3");
 
 //! What Happens when you run setTimeout?
 
@@ -904,3 +904,41 @@ console.log("3");
 //? Components always start with a Capital Letter
 //? Always remember to import/Export components
 //? Always have to render() a class
+
+//?==========================================
+//! Promises
+
+// const promise = new Promise((resolve, reject) => {
+//   if (true) {
+//     resolve("suff Worked");
+//   } else {
+//     reject("Error, it broke");
+//   }
+// });
+
+// promise
+//   .then(result => result + "!")
+//   .then(result2 => {
+//     throw Error;
+//     console.log(result2);
+//   })
+//   .catch(() => console.log("error!"));
+// //? .catch catches any errors between/inside .then
+
+//===============
+
+const urls = [
+  "https://jsonplaceholder.typicode.com/users",
+  "https://jsonplaceholder.typicode.com/posts",
+  "https://jsonplaceholder.typicode.com/albums"
+];
+
+Promise.all(
+  urls.map(url => {
+    return fetch(url).then(resp => resp.json());
+  })
+).then(results => {
+  console.log(results[0]);
+  console.log(results[2]);
+  console.log(results[3]);
+});
